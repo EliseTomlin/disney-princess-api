@@ -1,13 +1,16 @@
+require('dotenv').config();
+
 const express = require ('express')
 const cors = require ('cors')
 const app = express()
 const PORT = 8080
 const MongoClient = require('mongodb').MongoClient
-
+// const connectionString = process.env.connectionString || 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority';
+const connectionString = 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority'
 app.use(cors())
 app.use(express.json())
 
-const connectionString = process.env.connectionString || 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority';
+
 
 // const disneyPrincess = {
 //     'elsa':{
@@ -162,7 +165,7 @@ MongoClient.connect(connectionString,{useUnifiedTopology:true, useNewUrlParser:t
 
         app.get('/api/:name',(request,response)=>{
         const princessName = request.params.name.toLowerCase();infoCollection
-        .find({name:princessName})
+        .find({ name:princessName })
         .toArray()
         .then(results =>{
             console.log(results)
