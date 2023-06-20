@@ -6,6 +6,9 @@ async function apiRequest(){
         const response = await fetch(`https://disney-princess-facts-api.onrender.com/api/${name}`)
         const data = await response.json()
         console.log(data)
+    const princessImage = document.getElementById('princessImage')
+    princessImage.src = data.image
+    princessImage.alt = 'Princess Image'
         // document.getElementById('name').innerText = data.fullName
         // document.getElementById('princessWorld').innerText = data.location
         // document.getElementById('princessBirthPlace').innerText = data.birthPlace

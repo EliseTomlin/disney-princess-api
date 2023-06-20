@@ -10,15 +10,28 @@
   /******************************************
   /* LAYOUT
   /*******************************************/
-  body{
-    background-image: url("public/princess-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  img{
+    display: block;
+    margin: 0 auto;
   }
+  
+  
+  
+
   
   
   /******************************************
   /* ADDITIONAL STYLES
   /*******************************************/
-  
+  body{
+    background-image: url("../public/disney-princess-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+    padding-top: 13rem;
+    }
+    ul{
+      list-style: none;
+    }
+    
