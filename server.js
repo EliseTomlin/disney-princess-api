@@ -160,12 +160,19 @@ MongoClient.connect(connectionString,{useUnifiedTopology:true, useNewUrlParser:t
     })
 
         app.get('/api/:name',(request,response)=>{
-        const princessName = request.params.name.toLowerCase()
-        if(disneyPrincess[princessName]){  //if there are spaces envolved with the properties name the use [] because . notation doesnt work well with spaces... this doesnt apply to this snario at the moment but good to know for the future. will be using [] for this expample
-        response.json(disneyPrincess[princessName])
-    }else{
-        response.json(disneyPrincess ['unknown'])
-    }
+        const princessName = request.params.name.toLowerCase();infoCollection
+        .find({name:princessName})
+        .toArray()
+        .then(results =>{
+            console.log(results)
+            response.json(results[0])
+        })
+        .catch(error => console.error(error))
+    //     if(disneyPrincess[princessName]){  
+    //     response.json(disneyPrincess[princessName])
+    // }else{
+    //     response.json(disneyPrincess ['unknown'])
+    // }
     
     })
 })
