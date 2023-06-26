@@ -3,10 +3,11 @@ const cors = require ('cors')
 const app = express()
 const PORT = 8080
 const MongoClient = require('mongodb').MongoClient
-const connectionString = 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority'
 
 app.use(cors())
 app.use(express.json())
+
+const connectionString = process.env.connectionString || 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority';
 
 // const disneyPrincess = {
 //     'elsa':{
@@ -167,7 +168,7 @@ MongoClient.connect(connectionString,{useUnifiedTopology:true, useNewUrlParser:t
             console.log(results)
             response.json(results[0])
         })
-        .catch(error => console.error(error))
+        .catch((error) => console.error(error))
     //     if(disneyPrincess[princessName]){  
     //     response.json(disneyPrincess[princessName])
     // }else{
@@ -177,7 +178,7 @@ MongoClient.connect(connectionString,{useUnifiedTopology:true, useNewUrlParser:t
     })
 })
 
-.catch(error=>console.error(error))
+.catch((error)=>console.error(error))
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`the server is now running on port ${PORT}, better go catch it!`)
