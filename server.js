@@ -1,12 +1,14 @@
-require('dotenv').config();
 
 const express = require ('express')
 const cors = require ('cors')
 const app = express()
 const PORT = 8080
+require('dotenv').config();
+
+
 const MongoClient = require('mongodb').MongoClient
-// const connectionString = process.env.connectionString || 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority';
-const connectionString = 'mongodb+srv://edj46760:DTulmEwwAX4dtvxL@princess-info.xsfcktc.mongodb.net/?retryWrites=true&w=majority'
+const connectionString = process.env.connectionString
+// const connectionString = process.env.connectionString || 
 app.use(cors())
 app.use(express.json())
 
