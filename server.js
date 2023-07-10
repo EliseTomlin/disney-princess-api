@@ -21,7 +21,7 @@ const disneyPrincess = {
         'favoriteFood': 'Chocolate ice cream',
         'favoriteActivity': 'Ice skating and creating snow sculptures',
         'bestFriend': 'Olaf the snowman',
-        'image': 'https://disney-princess-facts-api.onrender.com/elsa.jpg'
+        // 'image': 'https://disney-princess-facts-api.onrender.com/elsa.jpg'
     },
     'anna': {
         'fullName': 'Priness Anna of Arendelle',
@@ -30,6 +30,7 @@ const disneyPrincess = {
         'favoriteFood': 'Chocolate cake',
         'favoriteActivity': 'Exploring and spending time wtih her sister Elsa',
         'bestFriend': 'Kristoff and Sven (and Elsa of course)'
+        
     },
 
     'unknown': {

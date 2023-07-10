@@ -35,3 +35,100 @@
       list-style: none;
     }
     
+    
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(350deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 50%);
+      border-radius: 50px;
+      /* position: relative; */
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    }
+    
+   
+    
+    .container:before {
+      left: -100px;
+    }
+    
+    .container:after {
+      right: -100px;
+    }
+    
+    
+    
+    h1 {
+      font-size: 7.5rem;
+      color: #0B7EB7;
+      margin-bottom: 1.5rem;
+      font-family: 'Mouse Memoirs', sans-serif;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      color: #0B7EB7;
+      margin-bottom: 1.5rem;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: #0B7EB7;
+      margin-bottom: 1.5rem;
+    }
+    
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #0B7EB7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #0B7EB7;
+    }
+    
+    .pics-right {
+      margin-top: 2rem;
+    }
+    
+    img#princessImage {
+      width: 200px;
+      height: auto;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+    
+    li {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    
+    li span {
+      font-weight: bold;
+      color: #0B7EB7;
+    }
+
+    
