@@ -156,6 +156,15 @@ const disneyPrincess = {
     
     },
 
+    'fionna': {
+        'fullName': 'Priness Fionna',
+        'birthPlace': 'Kingdom of Corona',
+        'Location': 'Kingdom of Corona',
+        'favoriteFood': 'Hazelnut soup',
+        'favoriteActivity': 'Painting, reading, and exploring the world outside her tower',
+        'bestFriend': 'Unknown'
+    
+    },
 }
 
 MongoClient.connect(connectionString,{useUnifiedTopology:true, useNewUrlParser:true})
