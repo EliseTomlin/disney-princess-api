@@ -11,6 +11,7 @@ const connectionString = process.env.connectionString
 // const connectionString = process.env.connectionString || 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 const disneyPrincess = {
@@ -163,7 +164,8 @@ MongoClient.connect(connectionString,{useUnifiedTopology:true, useNewUrlParser:t
    
 
         app.get('/', (request, response)=>{
-        response.sendFile(__dirname + '/index.html') 
+        // response.sendFile(__dirname + '/index.html') 
+        response.sendFile(path.join(__dirname, 'public', '/index.html')) 
     })
 
         app.get('/api/:name',(request,response)=>{
