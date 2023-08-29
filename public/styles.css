@@ -131,4 +131,6 @@
       color: #0B7EB7;
     }
 
-    
+   img[alt]{
+    visibility: hidden;
+   }
